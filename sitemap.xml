@@ -3,21 +3,119 @@
   
   <url>
     <loc>https://uuvip.github.io/categories/</loc>
-    <lastmod>2021-01-29T16:58:06+08:00</lastmod>
+    <lastmod>2021-01-29T18:19:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/tags/git/</loc>
+    <lastmod>2021-01-29T18:19:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/post/git%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2021-01-29T18:19:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://uuvip.github.io/post/</loc>
-    <lastmod>2021-01-29T16:58:06+08:00</lastmod>
+    <lastmod>2021-01-29T18:19:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://uuvip.github.io/tags/</loc>
-    <lastmod>2021-01-29T16:58:06+08:00</lastmod>
+    <lastmod>2021-01-29T18:19:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2021-01-29T18:19:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/</loc>
+    <lastmod>2021-01-29T18:19:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/tags/mkdocs/</loc>
+    <lastmod>2021-01-29T18:17:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/post/mkdocs%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2021-01-29T18:17:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/tags/hugo/</loc>
+    <lastmod>2021-01-29T18:14:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/post/hugo%E5%AE%89%E8%A3%85%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2021-01-29T18:14:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/tags/gitee/</loc>
+    <lastmod>2021-01-29T18:11:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/post/gitee%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2021-01-29T18:11:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/tags/gitbook/</loc>
+    <lastmod>2021-01-29T18:08:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/post/gitbook%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2021-01-29T18:08:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/tags/%E6%8B%BC%E5%A4%9A%E5%A4%9A/</loc>
+    <lastmod>2021-01-29T17:55:59+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://uuvip.github.io/post/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E8%AE%BE%E7%BD%AE/</loc>
+    <lastmod>2021-01-29T17:55:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30,21 +128,7 @@
   </url>
   
   <url>
-    <loc>https://uuvip.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-01-29T16:58:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://uuvip.github.io/tags/%E6%A2%A6%E5%B9%BB%E8%A5%BF%E6%B8%B8/</loc>
-    <lastmod>2021-01-29T16:58:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://uuvip.github.io/</loc>
     <lastmod>2021-01-29T16:58:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
