@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://uuvip.github.io</id>
+    <title>班长博客</title>
+    <updated>2024-03-28T17:26:29.589Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://uuvip.github.io"/>
+    <link rel="self" href="https://uuvip.github.io/atom.xml"/>
+    <subtitle>记录点滴-温故而知新</subtitle>
+    <logo>https://uuvip.github.io/images/avatar.png</logo>
+    <icon>https://uuvip.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, 班长博客</rights>
+    <entry>
+        <title type="html"><![CDATA[portainer汉化一键安装]]></title>
+        <id>https://uuvip.github.io/post/portainer-han-hua-yi-jian-an-zhuang/</id>
+        <link href="https://uuvip.github.io/post/portainer-han-hua-yi-jian-an-zhuang/">
+        </link>
+        <updated>2024-03-28T17:20:14.000Z</updated>
+        <content type="html"><![CDATA[<p>portainer汉化一键安装<br>
+root@qin:~# docker run -d --restart=always --name=&quot;portainer&quot; -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data 6053537/portainer-ce</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[黑群晖安装教程]]></title>
+        <id>https://uuvip.github.io/post/hei-qun-hui-an-zhuang-jiao-cheng/</id>
+        <link href="https://uuvip.github.io/post/hei-qun-hui-an-zhuang-jiao-cheng/">
+        </link>
+        <updated>2024-03-28T17:18:46.000Z</updated>
+        <content type="html"><![CDATA[<p>黑群晖安装教程【黑群晖arpl自编译引导 | 黑群晖arpl汉化版自编译引导保姆级教程，物理机+虚拟机，编译超快，简单好用】 https://www.bilibili.com/video/BV1YV4y1X7ak/?share_source=copy_web&amp;vd_source=b20317513aa463e62387d392a643d60f<br>
+https://www.fqkeji.net/1643.html</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[N1宝塔docker镜像]]></title>
+        <id>https://uuvip.github.io/post/n1-bao-ta-docker-jing-xiang/</id>
+        <link href="https://uuvip.github.io/post/n1-bao-ta-docker-jing-xiang/">
+        </link>
+        <updated>2024-03-28T17:17:41.000Z</updated>
+        <content type="html"><![CDATA[<p>https://www.right.com.cn/FORUM/thread-3246576-1-1.html<br>
+[N1盒子] 自制分享N1宝塔docker镜像|目前最完美省事的宝塔|已安装各种环境和插件<br>
+https://hub.docker.com/r/azking/arm64_bt59_lnmp<br>
+启动命令<br>
+docker run --name webServer1 -it --network=host azking/arm64_bt59_lnmp bash /www/init.sh</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[群晖镜像加速地址网站]]></title>
+        <id>https://uuvip.github.io/post/qun-hui-jing-xiang-jia-su-di-zhi-wang-zhan/</id>
+        <link href="https://uuvip.github.io/post/qun-hui-jing-xiang-jia-su-di-zhi-wang-zhan/">
+        </link>
+        <updated>2024-03-28T17:15:25.000Z</updated>
+        <content type="html"><![CDATA[<p>群晖镜像加速地址<br>
+https://dockerproxy.com/</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[m3u8下载]]></title>
+        <id>https://uuvip.github.io/post/m3u8-xia-zai/</id>
+        <link href="https://uuvip.github.io/post/m3u8-xia-zai/">
+        </link>
+        <updated>2024-03-28T17:11:53.000Z</updated>
+        <content type="html"><![CDATA[<p>m3u8下载<br>
+https://github.com/nilaoda/N_m3u8DL-CLI<br>
+视频教程https://www.bilibili.com/video/BV1nQ4y187aJ/?vd_source=744cd40df28613de0c2d71b341eb9bd1</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SyncTV 是一个允许您远程一起观看电影和直播的程序]]></title>
+        <id>https://uuvip.github.io/post/synctv-shi-yi-ge-yun-xu-nin-yuan-cheng-yi-qi-guan-kan-dian-ying-he-zhi-bo-de-cheng-xu/</id>
+        <link href="https://uuvip.github.io/post/synctv-shi-yi-ge-yun-xu-nin-yuan-cheng-yi-qi-guan-kan-dian-ying-he-zhi-bo-de-cheng-xu/">
+        </link>
+        <updated>2024-03-28T17:11:27.000Z</updated>
+        <content type="html"><![CDATA[<p>SyncTV 是一个允许您远程一起观看电影和直播的程序。它提供了同步观看、剧院和代理功能。使用 SyncTV，您可以与朋友和家人一起观看视频和直播，无论他们在哪里。<br>
+https://github.com/synctv-org/synctv/blob/main/README-CN.md<br>
+docker run -d --name synctv -p 18080:8080 synctvorg/synctv</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[电脑下载视频号项目]]></title>
+        <id>https://uuvip.github.io/post/dian-nao-xia-zai-shi-pin-hao-xiang-mu/</id>
+        <link href="https://uuvip.github.io/post/dian-nao-xia-zai-shi-pin-hao-xiang-mu/">
+        </link>
+        <updated>2024-03-28T17:10:51.000Z</updated>
+        <content type="html"><![CDATA[<p>电脑下载视频号项目<br>
+https://gitcode.net/zjq592767809/video_server<br>
+视频教程https://www.youtube.com/watch?v=GaL0k1VVfGE</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[视频分享项目]]></title>
+        <id>https://uuvip.github.io/post/shi-pin-fen-xiang-xiang-mu/</id>
+        <link href="https://uuvip.github.io/post/shi-pin-fen-xiang-xiang-mu/">
+        </link>
+        <updated>2024-03-28T17:09:39.000Z</updated>
+        <content type="html"><![CDATA[<p>https://registry.hub.docker.com/r/shaneisrael/fireshare<br>
+视频分享网站<br>
+https://hub.docker.com/r/shaneisrael/fireshare<br>
+https://github.com/ShaneIsrael/fireshare<br>
+运行命令<br>
+docker run --name fireshare -v /mnt/data/fireshare:/data:rw -v /mnt/fireshare_processed:/processed:rw -v /mnt/videos:/videos:rw -p 8080:80 -e ADMIN_PASSWORD=password -d shaneisrael/fireshare:latest</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[云转码Docker镜像]]></title>
+        <id>https://uuvip.github.io/post/yun-zhuan-ma-docker-jing-xiang/</id>
+        <link href="https://uuvip.github.io/post/yun-zhuan-ma-docker-jing-xiang/">
+        </link>
+        <updated>2024-03-28T17:07:09.000Z</updated>
+        <summary type="html"><![CDATA[<p>视频云转码https://hub.docker.com/r/moerats/express-ffmpeg<br>
+这里是详细介绍 express-ffmpeg 云转码的各种功能<br>
+https://ffmpeg.moejj.com/instruction/#_2018-%E5%B9%B4-9-%E6%9C%88-4-%E6%97%A5%E5%A4%A7%E6%9B%B4%E6%96%B0</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>视频云转码https://hub.docker.com/r/moerats/express-ffmpeg<br>
+这里是详细介绍 express-ffmpeg 云转码的各种功能<br>
+https://ffmpeg.moejj.com/instruction/#_2018-%E5%B9%B4-9-%E6%9C%88-4-%E6%97%A5%E5%A4%A7%E6%9B%B4%E6%96%B0</p>
+<!-- more -->
+<p>#运行镜像，将下面全部一起复制到ssh客户端运行<br>
+docker run --restart=always --name express-ffmpeg -d <br>
+-p 3000:3000 <br>
+-e localip=192.168.2.1 <br>
+-e usr=moerats <br>
+-e pass=moerats <br>
+-e url=moerats <br>
+-v ~/express-ffmpeg/mongodb:/data <br>
+-v ~/express-ffmpeg/config:/express-ffmpeg/config <br>
+-v ~/express-ffmpeg/movies:/express-ffmpeg/movies <br>
+-v ~/express-ffmpeg/videos:/express-ffmpeg/public/videos <br>
+-v ~/express-ffmpeg/uploads:/express-ffmpeg/public/uploads <br>
+-v ~/express-ffmpeg/images:/express-ffmpeg/public/images <br>
+moerats/express-ffmpeg</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[web文件服务器，轻量级云盘]]></title>
+        <id>https://uuvip.github.io/post/web-wen-jian-fu-wu-qi-qing-liang-ji-yun-pan/</id>
+        <link href="https://uuvip.github.io/post/web-wen-jian-fu-wu-qi-qing-liang-ji-yun-pan/">
+        </link>
+        <updated>2024-03-28T16:32:43.000Z</updated>
+        <content type="html"><![CDATA[<p>弥补共享缺陷，web文件服务器，轻量级云盘，任意文件二维码访问，支持在线播放<br>
+https://hub.docker.com/r/codeskyblue/gohttpserver<br>
+视频教程<br>
+https://www.bilibili.com/video/BV1QE411371o/?spm_id_from=333.337.search-card.all.click&amp;vd_source=744cd40df28613de0c2d71b341eb9bd1<br>
+<img src="https://uuvip.github.io/post-images/1711643652615.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+</feed>
