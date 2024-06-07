@@ -1,0 +1,338 @@
+
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        
+        
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/linuxdeploy-an-zhuang-debian-zuo-fu-wu-qi/">
+        <h2 class="post-title">linuxdeploy安装Debian做服务器</h2>
+      </a>
+      <div class="post-abstract">
+        <p>linux deploy：这里使用的版本是2.6.0，要求最新版的可以在GitHub上下载。</p>
+
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2022-01-22</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/niao-yun-chi-zhi-yi-heng/">
+        <h2 class="post-title">鸟云持之以恒</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2022-01-20</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/u-pan-ge-shi-hua-ming-ling/">
+        <h2 class="post-title">U盘格式化命令</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2022-01-17</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/gridea-huan-dian-nao-yi-ding-yao-bei-fen/">
+        <h2 class="post-title">Gridea换电脑一定要备份</h2>
+      </a>
+      <div class="post-abstract">
+        <p>Gridea换电脑，或者 是要重装系统一定要备份，</p>
+
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2022-01-17</span>
+        
+      </div>
+    </div>
+    
+      <a href="https://uuvip.github.io/post/gridea-huan-dian-nao-yi-ding-yao-bei-fen/">
+        <div class="feature-container" style="background-image: url('https://uuvip.github.io/post-images/gridea-huan-dian-nao-yi-ding-yao-bei-fen.PNG')">
+        </div>
+      </a>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/an-zhuang-php/">
+        <h2 class="post-title">安装php</h2>
+      </a>
+      <div class="post-abstract">
+        <p>第一步 安装php<br>
+换源，清华源或华为源。</p>
+
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2022-01-17</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/httpd-fu-wu-de-pei-zhi-wen-jian/">
+        <h2 class="post-title">httpd服务的配置文件</h2>
+      </a>
+      <div class="post-abstract">
+        <p>也就是阿帕奇配置</p>
+
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2022-01-17</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/filebrowser-kai-ji-zi-qi/">
+        <h2 class="post-title">filebrowser 开机自启</h2>
+      </a>
+      <div class="post-abstract">
+        <p>https://cikeblog.com/file-browser.html</p>
+
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2022-01-17</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/xiyouji/">
+        <h2 class="post-title">仿梦幻西游官方网站教程</h2>
+      </a>
+      <div class="post-abstract">
+        <p>点击‘系统’—系统基本参数 2）将‘站点根网址’改为您的网址，如http://www.xxx.com/（本地安装请保持http://127.0.0.1。） 3）点击‘确定’按钮</p>
+
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2022-01-09</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://uuvip.github.io/tag/zhxi5mh29L/">
+                梦幻西游
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+      <a href="https://uuvip.github.io/post/xiyouji/">
+        <div class="feature-container" style="background-image: url('https://s1.ax1x.com/2020/10/29/BYC5ge.jpg')">
+        </div>
+      </a>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/hugo-an-zhuang-bo-ke-jiao-cheng/">
+        <h2 class="post-title">hugo安装博客教程</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2022-01-09</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://uuvip.github.io/tag/Y15OJ4SAPr/">
+                hugo
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/gridea-ke-hu-duan-wu-fa-tong-bu-dao-github-pages/">
+        <h2 class="post-title">Gridea客户端无法同步到GitHub Pages</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2022-01-09</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+
+<div class="pagination-container">
+  
+    <a href="https://uuvip.github.io/page/6/" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
+  
+  
+    <a href="https://uuvip.github.io/page/8/" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
+  
+</div>
+
+
+      </div>
+
+      <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

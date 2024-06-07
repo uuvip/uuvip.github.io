@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>Gridea客户端无法同步到GitHub Pages | 班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">Gridea客户端无法同步到GitHub Pages</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-01-09</span>
+            
+          </div>
+          <div class="post-content">
+            <p>解决方法: 最好路由器开启梯子<br>
+说明：方法适用于任何人，谢谢。<br>
+首先，我一开始的报错提示是这个“客户端网络套接字在建立安全 TLS 连接之前断开连接”之后<br>
+，我就去谷歌，以下是解决方案。</p>
+<p>按Windows键<br>
+搜索互联网选项<br>
+点击“网络选项”<br>
+点击“连接”<br>
+实体设置<br>
+“在局域网中使用代理服务器”中是否有复选标记？如果是这样，请尝试取消删除它。<br>
+按照上面的方法试了一下，检测远程连接是可以了，但是同步还是会报错并且平GitHub上也是平不通的。<br>
+报错信息变成：连接ETIMEDOUT 140.82.112.4:443（后面的这个IP地址每个人可能不一样）</p>
+<p>我去站长之家http://ping.chinaz.com/github.com<br>
+找到了Ping的上GitHub的地址，Host文件，在最后一行编辑加上13.229.188.59 github.com<br>
+最后问题，就解决了了。<br>
+每个人情况不一样，可能和你用的VPN也有关系。我之前在微博上问过作者，作者说可能是网络问题。<br>
+如果上面的方法不适用你，估计只能等作者看看以后会不会修复这个问题了。</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://uuvip.github.io/post/安装zerotier/">
+              <h3 class="post-title">
+                下一篇：安装zerotier
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

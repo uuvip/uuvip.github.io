@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>N1安装Frigate实现IPcamera自动检测人脸识别自动化 | 班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">N1安装Frigate实现IPcamera自动检测人脸识别自动化</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2024-04-26</span>
+            
+          </div>
+          <div class="post-content">
+            <p>N1启动成功了</p>
+<p>docker run -d <br>
+--name frigate <br>
+--restart=unless-stopped <br>
+--mount type=tmpfs,target=/tmp/cache,tmpfs-size=1000000000 <br>
+--device /dev/bus/usb:/dev/bus/usb <br>
+--device /dev/dri/card0 <br>
+--shm-size=64m <br>
+-v /mnt/sda4/gongx/media:/media/frigate <br>
+-v /mnt/sda4/gongx/config:/config <br>
+-v /etc/localtime:/etc/localtime:ro <br>
+-e FRIGATE_RTSP_PASSWORD='password' <br>
+-p 5000:5000 <br>
+-p 8554:8554 <br>
+-p 8555:8555/tcp <br>
+-p 8555:8555/udp <br>
+ghcr.io/blakeblackshear/frigate:stable</p>
+<!-- more -->
+<p>视频说明<br>
+https://www.bilibili.com/video/BV1X3411p7Gq/?spm_id_from=333.880.my_history.page.click&amp;vd_source=744cd40df28613de0c2d71b341eb9bd1</p>
+<!-- more -->
+<p>https://www.truenasscale.com/2022/03/26/811.html</p>
+<!-- more -->
+<p>在安装之前我们需要先写一个配置文件</p>
+<p>大家自行创建存放frigate的数据集或者文件夹，在文件夹下创建config.yml如下</p>
+<!-- more -->
+<p>以上启动失败就是配置文件config.yml写错了。可以用简单的配置试试<br>
+mqtt:<br>
+enabled: False</p>
+<p>birdseye:<br>
+enabled: False<br>
+mode: motion<br>
+width: 1280<br>
+height: 720<br>
+objects:<br>
+track:<br>
+- person</p>
+<h1 id="-car">- car</h1>
+<h1 id="-motorcyle">- motorcyle</h1>
+<h1 id="-cat">- cat</h1>
+<h1 id="-dog">- dog</h1>
+<pre><code>    # Optional: list of objects to track from labelmap.txt (default: shown below)
+</code></pre>
+<p>ffmpeg:<br>
+output_args:<br>
+record: -f segment -segment_time 10 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c:v copy -c:a aac<br>
+cameras:<br>
+cam:<br>
+mqtt:<br>
+timestamp: False<br>
+bounding_box: False<br>
+crop: True<br>
+quality: 100<br>
+height: 500<br>
+ffmpeg:<br>
+inputs:<br>
+- path: rtsp://192.168.1.6:554/onvif1<br>
+roles:<br>
+- detect<br>
+- rtmp<br>
+- record</p>
+<p>detect:<br>
+height: 720<br>
+width: 1280<br>
+fps: 5<br>
+record:<br>
+enabled: True<br>
+# Optional: timeout for highest scoring image before allowing it<br>
+# to be replaced by a newer image. (default: shown below)<br>
+retain:<br>
+days: 3<br>
+snapshots:<br>
+enabled: True</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://uuvip.github.io/post/shi-pin-chou-zheng/">
+              <h3 class="post-title">
+                下一篇：视频抽帧
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

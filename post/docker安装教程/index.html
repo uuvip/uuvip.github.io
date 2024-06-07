@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>Docker安装教程 | 班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">Docker安装教程</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-09-09</span>
+            
+          </div>
+          <div class="post-content">
+            <!--more-->
+<p>安装步骤</p>
+<p>您需要 CentOS 7 或 8 的维护版本</p>
+<p>1，卸载旧版本</p>
+<p>yum remove docker <br>
+docker-client <br>
+docker-client-latest <br>
+docker-common <br>
+docker-latest <br>
+docker-latest-logrotate <br>
+docker-logrotate <br>
+docker-engine</p>
+<p>2，安装yum-utils包</p>
+<p>yum install -y yum-utils</p>
+<p>3，设置镜像下载库，下面以换成阿里云的了</p>
+<p>yum-config-manager <br>
+--add-repo <br>
+http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</p>
+<p>4，更新安装包<br>
+yum makecache fast</p>
+<p>5,安装 Docker 引擎<br>
+yum install docker-ce docker-ce-cli containerd.io</p>
+<p>6,启动 Docker。<br>
+sudo systemctl start docker</p>
+<p>7，查看安装版本是否成功<br>
+docker version</p>
+<p>8,通过运行hello-world 映像验证 Docker Engine 是否已正确安装</p>
+<p>docker run hello-world</p>
+<p>9，卸载docker</p>
+<p>1，先卸载docker依赖yum remove docker-ce docker-ce-cli containerd.io</p>
+<p>2，删除资源sudo rm -rf /var/lib/docker</p>
+<p>​           sudo rm -rf /var/lib/containerd</p>
+<p>第二部分<br>
+给docker安装图形化管理工具，方便查看</p>
+<p>docker run -d -p 9000:9000\</p>
+<p>--restart=always\</p>
+<p>-v /var/run/docker.sock:/var/run/docker.sock\</p>
+<p>--name prtainer-test\</p>
+<p>portainer/portainer-ce</p>
+<p>执行命令安装完后用IP加端口9000登录图形化查看</p>
+<p>docker常用命令</p>
+<p>docker version 显示docker的版本</p>
+<p>docker info 显示docker的系统信息包含镜像和容器的数量</p>
+<p>docker --help 帮助命令</p>
+<p>将docker设为开机自启动</p>
+<p>systemctl enable docker</p>
+<p>systemctl start docker</p>
+<p>镜像命令docker images</p>
+<p>docker images 查看所有本地主的镜像<br>
+查出来的结果以下</p>
+<p>REPOSITORY  代表镜像的仓库源</p>
+<p>tag         代表镜像的标签</p>
+<p>tmage       代表镜像的ID</p>
+<p>created     代表镜像的创建时间</p>
+<p>size        代表镜像的大小</p>
+<p>docker search mysql 镜像搜索命令mysql需要换成你想要的镜像包</p>
+<p>docker pull mysql   下载mysql，默认下载最新的</p>
+<p>docker pull mysql:5.7 下载mysql5.7版本指定版本下载</p>
+<p>删除镜像</p>
+<p>docker rmi -f 删除所有镜像</p>
+<p>docker rmi -f eerfdfgg删除指定镜像，后面字符代表要删镜像ID</p>
+<p>容器命令</p>
+<p>提示“有了镜像才可创建容器”</p>
+<p>以下载一个centos镜像来测试学习下</p>
+<p>docker pull centos 下载centos</p>
+<p>下载好后，启动容器</p>
+<p>docker run -t centos /bin/bash 启动容器并进入容器了</p>
+<p>退出容器回到主机 exit</p>
+<p>exit 退出容器并停止运行</p>
+<p>ctrl 加P 加Q 键盘快捷键退出容器，容器正常运行，这个不是命令哦</p>
+<p>docker ps 列出当前运行的容器</p>
+<p>docker ps -a 列出当前运行的容器加上运行过的容器</p>
+<p>删除容器</p>
+<p>docker rm ID 删除指定ID的容器</p>
+<p>docker rm -f 删除全部容器</p>
+<p>启动和停止容器</p>
+<p>docker start 容器ID 启动容器</p>
+<p>docker restart 容器id 重启容器</p>
+<p>docker stop 容器ID    停止当前运行的容器</p>
+<p>docker kill 容器ID   强制 停止当前运行的容器</p>
+<p>进入正在运行的容器</p>
+<p>docker attach 容器id</p>
+<p>docker attach 6060dacde207 第一种</p>
+<p>docker exec -it 6060dacde207 /bin/bash第二种</p>
+<p>docker exec 6060dacde207 /bin/bash</p>
+<h1 id="停止docker服务">停止docker服务</h1>
+<p>systemctl stop docker</p>
+<h1 id="重建-docker-网络">重建 docker 网络</h1>
+<p>ifconfig docker0 down<br>
+brctl delbr docker0</p>
+<h1 id="重启docker服务">重启docker服务</h1>
+<p>systemctl start docker</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://uuvip.github.io/post/温度计使用教程/">
+              <h3 class="post-title">
+                下一篇：温度计使用教程
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>rtsp视频流服务器 | 班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">rtsp视频流服务器</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2024-04-18</span>
+            
+          </div>
+          <div class="post-content">
+            <p>https://github.com/bluenviron/mediamtx</p>
+<!-- more -->
+<p>https://hub.docker.com/r/bluenviron/mediamtx</p>
+<!-- more -->
+<p>Download and launch the image:</p>
+<p>docker run  -it <br>
+-e MTX_PROTOCOLS=tcp <br>
+-e MTX_WEBRTCADDITIONALHOSTS=192.168.1.111 <br>
+-p 28554:8554 <br>
+-p 11935:1935 <br>
+-p 18888:8888 <br>
+-p 18889:8889 <br>
+-p 18890:8890/udp <br>
+-p 18189:8189/udp <br>
+bluenviron/mediamtx:latest-ffmpeg<br>
+docker搭建的话，直接进入容器内部用命令推流<br>
+docker exec -it d59cfdd95e4f /bin/sh   进入容器，使用以下命令推流，，exit退出容器<br>
+推流命令<br>
+ffmpeg -re -stream_loop -1 -i 22.mp4 -c copy -an -f rtsp rtsp://127.0.0.1:8554/mystream  视频，循环推流</p>
+<!-- more -->
+<p>监控推流<br>
+ffmpeg -i rtsp://192.168.1.6:554/onvif1 -c copy -f rtsp rtsp://localhost:8554/mystream</p>
+<!-- more -->
+<p>电脑USB摄像机推流，首先获取USB摄像头名称<br>
+ffmpeg -list_devices true -f dshow -i dummy 查看摄像头名称<br>
+ffmpeg -f dshow -i video=&quot;USB2.0 PC CAMERA&quot; -vcodec libx264 -preset:v ultrafast -tune:v zerolatency -rtsp_transport tcp -f rtsp rtsp://192.168.1.3:8554/video -thread_queue_size 50</p>
+<!-- more -->
+<p>ffmpeg: 这是调用FFmpeg程序的命令。<br>
+ffmpeg -list_devices true -f dshow -i dummy 查看摄像头名称<br>
+-re: 以实时速率读取输入文件，使其与摄像头的实时数据流保持同步。<br>
+-rtsp_transport tcp: 这个参数是用来指定RTSP流的传输协议为TCP。<br>
+-vcodec h264: 输出视频的编解码器为H.264。<br>
+-b:v 1000k: 比特率为1000千位每秒 (k表示千位)。比特率决定了视频的质量和文件大小。<br>
+-f rtsp: 输出格式为RTSP流。<br>
+-an 表示不编码音频<br>
+web实时观看页面 http://localhost:8889/mystream</p>
+<p>vlc拉取命令 rtsp://localhost:8554/mystream</p>
+<!-- more -->
+<p>python detect.py --source C:\Users\qinpc\Downloads/花园-20240413-122411.mp4 --view-img --classes 0 --conf-thres 0.5<br>
+yolov5识别视频人物<br>
+--view-img 表示可见视频，显示实时视频，去掉就不见<br>
+--classes 0  只识别人，去掉全部物体都识别<br>
+--conf-thres 0.5 表示0.5以下的不显示<br>
+python detect.py --source http://192.168.1.3:8080 --classes 0 --view-img --conf-thres 0.5</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://uuvip.github.io/post/onvif-ce-shi-gong-ju/">
+              <h3 class="post-title">
+                下一篇：onvif测试工具
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

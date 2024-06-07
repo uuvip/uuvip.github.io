@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>摄像头监控管理系统 | 班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">摄像头监控管理系统</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-11-10</span>
+            
+          </div>
+          <div class="post-content">
+            <p>SHINOBI https://shinobi.video/ 界面比较好看，有物体检测等功能。个人免费，数量不限。<br>
+Kerberos https://www.kerberos.io/ 有免费版<br>
+Zoneminder https://zoneminder.com/ 免费开源，App 5 刀<br>
+Zoneminde支持docker安装成功，带移动监测</p>
+<!-- more -->
+<p>目前SHINOBI安装成功过 ！ubuntu上一键命令，udp我的协议<br>
+https://docs.shinobi.video/installation/ninja-way安装命令</p>
+<p>https://hub.docker.com/r/doitandbedone/ispyagentdvr<br>
+这个也可以安装，可以存视频<br>
+已拉取成功，添加视频教程<br>
+https://www.youtube.com/watch?v=uMT9nwSDB_s</p>
+<!-- more -->
+<p>另一个docker项目浏览器拉取RTSP，只能看不能存视频<br>
+RTSP 流转换为可在 Web 浏览器中使用的格式<br>
+https://github.com/deepch/RTSPtoWeb</p>
+<!-- more -->
+<h2 id="手机上拉取rtsp上传百度网盘实现-云存储httpsgithubcomwfxzf安卓手机">手机上拉取RTSP上传百度网盘实现 云存储<br>
+https://github.com/wfxzf<br>
+安卓手机</h2>
+<!-- morZoneminde支持docker安装成功，带移动监测e -->
+<p>Zoneminde支持docker安装成功，带移动监测<br>
+使用教程<br>
+https://zoneminder.readthedocs.io/en/latest/userguide/index.html<br>
+Docker 镜像发布到 Docker Hub，可以直接从那里拉取，例如<br>
+https://hub.docker.com/r/zoneminderhq/zoneminder</p>
+<p>githun<br>
+https://github.com/ZoneMinder/zmdockerfiles</p>
+<!-- more -->
+<p>主机安装简单的方法：Ubuntu<br>
+apt-get install mysql-server<br>
+add-apt-repository ppa:iconnor/zoneminder-1.36<br>
+apt-get install zoneminder</p>
+<p>systemctl enable zoneminder<br>
+systemctl start zoneminder</p>
+<p>systemctl reload apache2<br>
+视频教程https://www.youtube.com/watch?v=hUqMUhgytyc</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://uuvip.github.io/post/you-xi-xia-zai-wang-zhan-di-zhi/">
+              <h3 class="post-title">
+                下一篇：游戏下载网站地址
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

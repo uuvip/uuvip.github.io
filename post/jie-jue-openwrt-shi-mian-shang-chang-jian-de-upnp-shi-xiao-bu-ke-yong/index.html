@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>解决openwrt市面上常见的upnp失效不可用 | 班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">解决openwrt市面上常见的upnp失效不可用</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-11-05</span>
+            
+          </div>
+          <div class="post-content">
+            <p>解决openwrt市面上常见的upnp失效不可用<br>
+第一修改 /etc/config/upnpd 文件<br>
+我的固件只需在 /etc/config/upnpd里加上option external_iface 'WAN'这句代码重启就可以了<br>
+解决方案：使用winscp或ssh vi命令修改/etc/config/upnpd文件<br>
+config upnpd 'config'<br>
+option external_iface 'WAN'<br>
+option internal_iface 'lan'<br>
+option port '5000'<br>
+option upnp_lease_file '/var/run/miniupnpd.leases'<br>
+option enabled '1'<br>
+option uuid '4bd6f6b5-61d0-4ddf-a170-26c318494fa9'<br>
+option presentation_url 'http://192.168.8.1'<br>
+option download '1024'<br>
+option upload '512'<br>
+解决方案：使用winscp或ssh vi命令修改文件<br>
+第二改miniupnpd的配置文件<br>
+/tmp/etc/miniupnpd.conf<br>
+ext_ifname=pppoe-wan<br>
+ext_ifname6=pppoe-wan<br>
+listening_ip=br-lan<br>
+enable_natpmp=yes<br>
+enable_upnp=yes<br>
+secure_mode=yes<br>
+system_uptime=yes<br>
+force_igd_desc_v1=no<br>
+ext_perform_stun=no<br>
+ipv6_disable=no<br>
+bitrate_down=8388608<br>
+bitrate_up=4194304<br>
+lease_file=/var/run/miniupnpd.leases<br>
+presentation_url=http://192.168.8.1<br>
+port=5000<br>
+uuid=4bd6f6b5-61d0-4ddf-a170-26c318494fa9<br>
+allow 1024-65535 0.0.0.0/0 1024-65535 #Allow high ports<br>
+deny 0-65535 0.0.0.0/0 0-65535 #Default deny<br>
+最后重启路由<br>
+图文教程<br>
+https://www.right.com.cn/forum/thread-8204946-1-1.html</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://uuvip.github.io/post/shou-ji-frps-pei-zhi/">
+              <h3 class="post-title">
+                下一篇：手机frps配置
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

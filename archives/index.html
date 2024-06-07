@@ -1,0 +1,895 @@
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+        <div class="content-container">
+          
+          
+
+<div class="archives-container">
+  
+    <h2 class="year">2024</h2>
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/yolov5-huan-jing-an-zhuang/">
+            <h2 class="post-title">
+              yolov5环境安装
+              <small>2024-06-08</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/docker-an-zhuang-zerotier/">
+            <h2 class="post-title">
+              docker安装zerotier
+              <small>2024-06-06</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/da-hua-jian-kong-hui-fu-chu-han/">
+            <h2 class="post-title">
+              大华监控恢复出厂
+              <small>2024-05-03</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/n1-an-zhuang-frigate-shi-xian-ipcamera-zi-dong-jian-ce-ren-lian-shi-bie-zi-dong-hua/">
+            <h2 class="post-title">
+              N1安装Frigate实现IPcamera自动检测人脸识别自动化
+              <small>2024-04-26</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/shi-pin-chou-zheng/">
+            <h2 class="post-title">
+              视频抽帧
+              <small>2024-04-23</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/mo-xing-xun-lian-yolov5-master/">
+            <h2 class="post-title">
+              模型训练yolov5-master
+              <small>2024-04-23</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/php-tu-pian-dao-xu-pai-lie/">
+            <h2 class="post-title">
+              PHP图片倒序排列
+              <small>2024-04-21</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/yolov5-shi-bie-tu-pian-shi-pin-zhi-bao-liu-ren-wu-zheng-shu/">
+            <h2 class="post-title">
+              yolov5识别图片视频人物帧数
+              <small>2024-04-21</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/rtsp-shi-pin-liu-fu-wu-qi/">
+            <h2 class="post-title">
+              rtsp视频流服务器
+              <small>2024-04-18</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/onvif-ce-shi-gong-ju/">
+            <h2 class="post-title">
+              onvif测试工具
+              <small>2024-04-10</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/docker-an-zhuang-web-she-xiang-tou-xiang-mu-zoneminder/">
+            <h2 class="post-title">
+              docker安装web摄像头项目zoneminder
+              <small>2024-04-08</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/n1docker-an-zhuang-frpc/">
+            <h2 class="post-title">
+              n1docker安装frpc
+              <small>2024-04-07</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/docker-an-zhuang-web-she-xiang-tou-xiang-mu-motioneye/">
+            <h2 class="post-title">
+              docker安装web摄像头项目 motioneye
+              <small>2024-04-07</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/portainer-han-hua-yi-jian-an-zhuang/">
+            <h2 class="post-title">
+              portainer汉化一键安装
+              <small>2024-03-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/hei-qun-hui-an-zhuang-jiao-cheng/">
+            <h2 class="post-title">
+              黑群晖安装教程
+              <small>2024-03-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/n1-bao-ta-docker-jing-xiang/">
+            <h2 class="post-title">
+              N1宝塔docker镜像
+              <small>2024-03-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/qun-hui-jing-xiang-jia-su-di-zhi-wang-zhan/">
+            <h2 class="post-title">
+              群晖镜像加速地址网站
+              <small>2024-03-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/m3u8-xia-zai/">
+            <h2 class="post-title">
+              m3u8下载
+              <small>2024-03-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/synctv-shi-yi-ge-yun-xu-nin-yuan-cheng-yi-qi-guan-kan-dian-ying-he-zhi-bo-de-cheng-xu/">
+            <h2 class="post-title">
+              SyncTV 是一个允许您远程一起观看电影和直播的程序
+              <small>2024-03-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/dian-nao-xia-zai-shi-pin-hao-xiang-mu/">
+            <h2 class="post-title">
+              电脑下载视频号项目
+              <small>2024-03-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/shi-pin-fen-xiang-xiang-mu/">
+            <h2 class="post-title">
+              视频分享项目
+              <small>2024-03-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/yun-zhuan-ma-docker-jing-xiang/">
+            <h2 class="post-title">
+              云转码Docker镜像
+              <small>2024-03-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/web-wen-jian-fu-wu-qi-qing-liang-ji-yun-pan/">
+            <h2 class="post-title">
+              web文件服务器，轻量级云盘
+              <small>2024-03-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/xiao-mi-lu-you-shua-gu-jian/">
+            <h2 class="post-title">
+              小米路由刷固件
+              <small>2024-03-20</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/openwrt-n1-lian-jie-wifi-she-zhi/">
+            <h2 class="post-title">
+              OPENWRT-N1连接wifi设置
+              <small>2024-03-20</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    <h2 class="year">2023</h2>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/17-ce-shi-ji/">
+            <h2 class="post-title">
+              n1.armbian.op固件下载地址
+              <small>2023-11-17</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    <h2 class="year">2022</h2>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/docker-da-jian-si-ren-zhi-bo-ping-tai/">
+            <h2 class="post-title">
+              docker搭建私人直播平台
+              <small>2022-11-17</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/openwrt-kai-qi-ipv6-bian-yi/">
+            <h2 class="post-title">
+              OpenWrt开启ipv6编译
+              <small>2022-11-16</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/an-zhuang-mysql-shu-ju-ku-jiao-cheng/">
+            <h2 class="post-title">
+              安装mysql数据库教程
+              <small>2022-11-16</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/win10-dian-nao-an-zhuang-python/">
+            <h2 class="post-title">
+              win10电脑安装python
+              <small>2022-11-15</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/ipv6ipv4-duan-kou-zhuan-fa-socat-ti-dai-pin/">
+            <h2 class="post-title">
+              ipv6/ipv4 端口转发,socat替代品
+              <small>2022-11-14</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/ubuntu2204-fu-wu-qi-ban-wifi-lian-jie/">
+            <h2 class="post-title">
+              ubuntu22.04服务器版WiFi连接
+              <small>2022-11-12</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/she-xiang-tou-jian-kong-guan-li-xi-tong/">
+            <h2 class="post-title">
+              摄像头监控管理系统
+              <small>2022-11-10</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/you-xi-xia-zai-wang-zhan-di-zhi/">
+            <h2 class="post-title">
+              游戏下载网站地址
+              <small>2022-11-07</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/a-li-yun-pan-zi-yuan-sou-suo/">
+            <h2 class="post-title">
+              阿里云盘资源搜索
+              <small>2022-11-06</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/yi-ge-ip-dui-ying-yi-ge-ling-pai/">
+            <h2 class="post-title">
+              一个ip对应一个令牌
+              <small>2022-11-06</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/265/">
+            <h2 class="post-title">
+              关于上传是本地ip问题
+              <small>2022-11-06</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/de-shuo-fa-shi/">
+            <h2 class="post-title">
+              GitHubDesktop使用方法
+              <small>2022-11-05</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/evillimiter-chang-yong-ming-ling/">
+            <h2 class="post-title">
+              evillimiter常用命令
+              <small>2022-11-05</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/n1-xia-zai-di-zhi/">
+            <h2 class="post-title">
+              n1下载地址：
+              <small>2022-11-05</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/docker-x86-jing-xiang-openwrt/">
+            <h2 class="post-title">
+              docker x86镜像 openwrt
+              <small>2022-11-05</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/v2raya-shi-yi-kuan-fei-chang-qiang-da-de-ruan-jian/">
+            <h2 class="post-title">
+              v2rayA是一款非常强大的软件
+              <small>2022-11-05</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/jie-jue-openwrt-shi-mian-shang-chang-jian-de-upnp-shi-xiao-bu-ke-yong/">
+            <h2 class="post-title">
+              解决openwrt市面上常见的upnp失效不可用
+              <small>2022-11-05</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/shou-ji-frps-pei-zhi/">
+            <h2 class="post-title">
+              手机frps配置
+              <small>2022-05-22</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/ji-bi-te-h2-3e-guang-mao-huo-qu-chao-ji-guan-li-mi-ma/">
+            <h2 class="post-title">
+              吉比特H2-3e光猫获取超级管理密码
+              <small>2022-05-13</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/jian-kong/">
+            <h2 class="post-title">
+              监控
+              <small>2022-05-06</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/dian-shi-he-zi-u-pan-qi-dong-ming-ling/">
+            <h2 class="post-title">
+              电视盒子U盘启动命令
+              <small>2022-05-06</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/zi-ji-bian-yi-r3g-shuo-ming/">
+            <h2 class="post-title">
+              自己编译全R3G说明
+              <small>2022-04-14</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/ubuntu-xia-yong-lean-yuan-ma-bian-yi-openwrt/">
+            <h2 class="post-title">
+              Ubuntu下用Lean源码编译openwrt
+              <small>2022-04-10</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/openwrt-er-ci-bian-yi-ji-ben-chang-yong-ming-ling/">
+            <h2 class="post-title">
+              openwrt二次编译基本常用命令
+              <small>2022-04-08</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+  
+</div>
+
+
+        </div>
+
+        <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+      </div>
+      <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>hugo安装博客教程 | 班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">hugo安装博客教程</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-01-09</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://uuvip.github.io/tag/Y15OJ4SAPr/">
+                    hugo
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>hugo version 查看安装成功命令<br>
+1， 首先下载安装hugo 下载地址https://github.com/gohugoio/hugo/releases 下载之后解压得到“hugo.exe”等文件。 将hugo.exe所在的目录添加到系统环境变量PATH下面，打开cmd，输入“hugo version”。查看安装成功 D:\2345Downloads\hugo_0.78.1_Windows-64bit 变量设置好后重启CMD</p>
+<p>2 ，创建站点&amp;文章，想要创建站点，一个命令搞定，切换到你想要创建站点的目录，输入： hugo new site blog 创建一个站点目录为blog 也可以是其他</p>
+<p>在CD 到blog里面就看见生成的很多系统文件了 当前的站没有任何内容，也没做任何配置。</p>
+<p>3，安装主题 站点一定要有主题，安装主题应该是最难的一步了，因为不同的主题设置方式也会有所不同。 Hugo themes：https://themes.gohugo.io/</p>
+<p>你可以到上面的网站中挑选你喜欢的主题。然后，根据指引找到github项目地址进行下载。</p>
+<p>把主题通过git克隆或直接下载到本地。放到 …/blog/themes/目录下。</p>
+<p>4 ，配置config.toml 在下载的模板主题下找到exampleSite文件复制里面的config.toml等文件到网站的根目录下替换</p>
+<p>5，启动本地服务器 hugo server -t hugo-theme –buildDrafts 《-t hugo-theme是指用这个模板》</p>
+<p>https://themes.gohugo.io/hugo-theme-easybook 主题模板</p>
+<p>可以用的主题git clone https://github.com/olOwOlo/hugo-theme-even themes/even 可以用的主题安装说明https://github.com/olOwOlo/hugo-theme-even/blob/master/README-zh.md</p>
+<p>文章格式代码</p>
+<hr>
+<h2 id="title-replace-translationbasename-title-date-date-lastmod-date-tags-标签categories-分类">title: &quot;{{ replace .TranslationBaseName &quot;-&quot; &quot; &quot; | title }}&quot;<br>
+date: {{ .Date }}<br>
+lastmod: {{ .Date }}<br>
+tags: [&quot;标签&quot;]<br>
+categories: [&quot;分类&quot;]</h2>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://uuvip.github.io/post/gridea-ke-hu-duan-wu-fa-tong-bu-dao-github-pages/">
+              <h3 class="post-title">
+                下一篇：Gridea客户端无法同步到GitHub Pages
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://uuvip.github.io</id>
+    <title>班长博客</title>
+    <updated>2024-06-07T16:57:17.981Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://uuvip.github.io"/>
+    <link rel="self" href="https://uuvip.github.io/atom.xml"/>
+    <subtitle>记录点滴-温故而知新</subtitle>
+    <logo>https://uuvip.github.io/images/avatar.png</logo>
+    <icon>https://uuvip.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, 班长博客</rights>
+    <entry>
+        <title type="html"><![CDATA[yolov5环境安装]]></title>
+        <id>https://uuvip.github.io/post/yolov5-huan-jing-an-zhuang/</id>
+        <link href="https://uuvip.github.io/post/yolov5-huan-jing-an-zhuang/">
+        </link>
+        <updated>2024-06-07T16:44:18.000Z</updated>
+        <content type="html"><![CDATA[<p>安装miniconda清华大学开源软件镜像站<br>
+版本https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py38_22.11.1-1-Windows-x86_64.exe<br>
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/</p>
+<p>1,创建一个名为yolov5的环境，指定python=3.8为3.8版本<br>
+conda create -n yolov5 python=3.8</p>
+<p>2,激活 yolov5环境<br>
+conda activate yolov5</p>
+<p>3,查看当前已经安装的包<br>
+pip list</p>
+<p>4,安装pytorch.org在激活的yolov5环境中<br>
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu</p>
+<p>5,下载yolov5项目包<br>
+https://github.com/ultralytics/yolov5</p>
+<p>6,进入下载解压的文件里<br>
+cd C:\yolov5-master</p>
+<p>7,安装依赖<br>
+pip install -r requirements.txt</p>
+<p>8,安装完成后跑一下示例看看<br>
+python detect.py<br>
+跑监控rtsp地址用双引号&quot;rtsp://admin:123@192.168.1.9:554/onvif1&quot;</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[docker安装zerotier]]></title>
+        <id>https://uuvip.github.io/post/docker-an-zhuang-zerotier/</id>
+        <link href="https://uuvip.github.io/post/docker-an-zhuang-zerotier/">
+        </link>
+        <updated>2024-06-05T16:52:25.000Z</updated>
+        <content type="html"><![CDATA[<p>docker安装zerotier<br>
+https://xyzbz.cn/archives/1046/<br>
+https://hub.docker.com/r/bltavares/zerotier<br>
+拉取镜像<br>
+docker pull docker.nju.edu.cn/bltavares/zerotier<br>
+启动镜像<br>
+docker run --name myzerotier --net=host --cap-add NET_ADMIN --cap-add=SYS_ADMIN -v /mnt/sda4/docker/zerotier:/var/lib/zerotier-one --device /dev/net/tun docker.nju.edu.cn/bltavares/zerotier:latest<br>
+加入网络<br>
+docker exec myzerotier zerotier-cli join 14244a1e71ff444</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[大华监控恢复出厂]]></title>
+        <id>https://uuvip.github.io/post/da-hua-jian-kong-hui-fu-chu-han/</id>
+        <link href="https://uuvip.github.io/post/da-hua-jian-kong-hui-fu-chu-han/">
+        </link>
+        <updated>2024-05-03T12:25:42.000Z</updated>
+        <content type="html"><![CDATA[<p>打开前盖后，在拆里面的3颗固定螺丝。镜头的背面就有2个洞是短接点<br>
+1.拆开完后，先给机子通电3-5分钟，让机子完全启动后，再用短接的细铁丝，在短接点，短接5-10秒松开。等待3分钟机子自己重启，就可以在浏览器输入192.168.1.108，使用admin/admin进入后，马上修改密码，看到有画面就可以了。<br>
+2.最后，断电，把机子装回去！<br>
+<img src="https://uuvip.github.io/post-images/1714739867038.jpg" alt="" loading="lazy"><br>
+<img src="https://uuvip.github.io/post-images/1714739878739.jpg" alt="" loading="lazy"><br>
+<img src="https://uuvip.github.io/post-images/1714739885016.jpg" alt="" loading="lazy"><br>
+图三2个洞为短接点，3-5秒松开<br>
+rtsp://admin:zxcv1234@192.168.1.108:554/cam/realmonitor?channel=1&amp;subtype=1<br>
+rtsp://admin:zxcv1234@192.168.1.108:554/cam/realmonitor?channel=1&amp;subtype=0<br>
+说明: 用大华云联，手机就可以看<br>
+channel: 通道号，起始为1。例如通道2，则为channel=2。<br>
+subtype: 码流类型，主码流为0（即subtype=0），辅码流为1（即subtype=1</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[N1安装Frigate实现IPcamera自动检测人脸识别自动化]]></title>
+        <id>https://uuvip.github.io/post/n1-an-zhuang-frigate-shi-xian-ipcamera-zi-dong-jian-ce-ren-lian-shi-bie-zi-dong-hua/</id>
+        <link href="https://uuvip.github.io/post/n1-an-zhuang-frigate-shi-xian-ipcamera-zi-dong-jian-ce-ren-lian-shi-bie-zi-dong-hua/">
+        </link>
+        <updated>2024-04-25T18:15:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>N1启动成功了</p>
+<p>docker run -d <br>
+--name frigate <br>
+--restart=unless-stopped <br>
+--mount type=tmpfs,target=/tmp/cache,tmpfs-size=1000000000 <br>
+--device /dev/bus/usb:/dev/bus/usb <br>
+--device /dev/dri/card0 <br>
+--shm-size=64m <br>
+-v /mnt/sda4/gongx/media:/media/frigate <br>
+-v /mnt/sda4/gongx/config:/config <br>
+-v /etc/localtime:/etc/localtime:ro <br>
+-e FRIGATE_RTSP_PASSWORD='password' <br>
+-p 5000:5000 <br>
+-p 8554:8554 <br>
+-p 8555:8555/tcp <br>
+-p 8555:8555/udp <br>
+ghcr.io/blakeblackshear/frigate:stable</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>N1启动成功了</p>
+<p>docker run -d <br>
+--name frigate <br>
+--restart=unless-stopped <br>
+--mount type=tmpfs,target=/tmp/cache,tmpfs-size=1000000000 <br>
+--device /dev/bus/usb:/dev/bus/usb <br>
+--device /dev/dri/card0 <br>
+--shm-size=64m <br>
+-v /mnt/sda4/gongx/media:/media/frigate <br>
+-v /mnt/sda4/gongx/config:/config <br>
+-v /etc/localtime:/etc/localtime:ro <br>
+-e FRIGATE_RTSP_PASSWORD='password' <br>
+-p 5000:5000 <br>
+-p 8554:8554 <br>
+-p 8555:8555/tcp <br>
+-p 8555:8555/udp <br>
+ghcr.io/blakeblackshear/frigate:stable</p>
+<!-- more -->
+<p>视频说明<br>
+https://www.bilibili.com/video/BV1X3411p7Gq/?spm_id_from=333.880.my_history.page.click&amp;vd_source=744cd40df28613de0c2d71b341eb9bd1</p>
+<!-- more -->
+<p>https://www.truenasscale.com/2022/03/26/811.html</p>
+<!-- more -->
+<p>在安装之前我们需要先写一个配置文件</p>
+<p>大家自行创建存放frigate的数据集或者文件夹，在文件夹下创建config.yml如下</p>
+<!-- more -->
+<p>以上启动失败就是配置文件config.yml写错了。可以用简单的配置试试<br>
+mqtt:<br>
+enabled: False</p>
+<p>birdseye:<br>
+enabled: False<br>
+mode: motion<br>
+width: 1280<br>
+height: 720<br>
+objects:<br>
+track:<br>
+- person</p>
+<h1 id="-car">- car</h1>
+<h1 id="-motorcyle">- motorcyle</h1>
+<h1 id="-cat">- cat</h1>
+<h1 id="-dog">- dog</h1>
+<pre><code>    # Optional: list of objects to track from labelmap.txt (default: shown below)
+</code></pre>
+<p>ffmpeg:<br>
+output_args:<br>
+record: -f segment -segment_time 10 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c:v copy -c:a aac<br>
+cameras:<br>
+cam:<br>
+mqtt:<br>
+timestamp: False<br>
+bounding_box: False<br>
+crop: True<br>
+quality: 100<br>
+height: 500<br>
+ffmpeg:<br>
+inputs:<br>
+- path: rtsp://192.168.1.6:554/onvif1<br>
+roles:<br>
+- detect<br>
+- rtmp<br>
+- record</p>
+<p>detect:<br>
+height: 720<br>
+width: 1280<br>
+fps: 5<br>
+record:<br>
+enabled: True<br>
+# Optional: timeout for highest scoring image before allowing it<br>
+# to be replaced by a newer image. (default: shown below)<br>
+retain:<br>
+days: 3<br>
+snapshots:<br>
+enabled: True</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[视频抽帧]]></title>
+        <id>https://uuvip.github.io/post/shi-pin-chou-zheng/</id>
+        <link href="https://uuvip.github.io/post/shi-pin-chou-zheng/">
+        </link>
+        <updated>2024-04-23T12:18:10.000Z</updated>
+        <content type="html"><![CDATA[<p>import cv2</p>
+<h1 id="视频文件路径">视频文件路径</h1>
+<p>video_path = 'C:/Users/qinpc/Downloads/huayuan-20240419-184900.mp4'</p>
+<h1 id="创建videocapture对象">创建VideoCapture对象</h1>
+<p>cap = cv2.VideoCapture(video_path)</p>
+<h1 id="获取视频的帧速率">获取视频的帧速率</h1>
+<p>fps = cap.get(cv2.CAP_PROP_FPS)</p>
+<h1 id="设置每秒抽取的帧数这里我们抽取每秒1帧数字越大抽取的图片越多">设置每秒抽取的帧数，这里我们抽取每秒1帧,数字越大抽取的图片越多，</h1>
+<p>frames_to_extract = 1</p>
+<h1 id="计算抽取每一帧的间隔">计算抽取每一帧的间隔</h1>
+<p>frame_interval = int(round(fps / frames_to_extract))</p>
+<h1 id="帧计数器">帧计数器</h1>
+<p>frame_count = 0</p>
+<h1 id="检查视频是否成功打开">检查视频是否成功打开</h1>
+<p>if cap.isOpened():<br>
+# 循环读取视频帧<br>
+success = True<br>
+while success:<br>
+success, frame = cap.read()<br>
+if success:<br>
+# 如果是需要的帧，进行处理<br>
+if frame_count % frame_interval == 0:<br>
+# 这里可以添加你的帧处理代码<br>
+cv2.imwrite(f'frame_{frame_count // frame_interval}.png', frame)</p>
+<pre><code>        frame_count += 1
+    else:
+        break
+# 释放VideoCapture对象
+cap.release()
+</code></pre>
+<h1 id="关闭所有窗口">关闭所有窗口</h1>
+<p>cv2.destroyAllWindows()</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[模型训练yolov5-master]]></title>
+        <id>https://uuvip.github.io/post/mo-xing-xun-lian-yolov5-master/</id>
+        <link href="https://uuvip.github.io/post/mo-xing-xun-lian-yolov5-master/">
+        </link>
+        <updated>2024-04-23T10:49:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>源码https://github.com/ultralytics/yolov5下载好<br>
+用labelimg工具标记要训练的物体，图越多，训练次数越多，效果才好<br>
+标记完后<br>
+整理文件夹，结构<br>
+需要2个文件名，images和labels 就是标记好的图片和标签，放这2个放在任意一个文件里面，放在yolo工作目录里，如图<br>
+<img src="https://uuvip.github.io/post-images/1713869909055.png" alt="" loading="lazy"></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>源码https://github.com/ultralytics/yolov5下载好<br>
+用labelimg工具标记要训练的物体，图越多，训练次数越多，效果才好<br>
+标记完后<br>
+整理文件夹，结构<br>
+需要2个文件名，images和labels 就是标记好的图片和标签，放这2个放在任意一个文件里面，放在yolo工作目录里，如图<br>
+<img src="https://uuvip.github.io/post-images/1713869909055.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>下面开始修改配置文件<br>
+在项目里面找到data\coco128.yaml文件，复制一份出来修改文件名为huoji128.yaml<br>
+在修改huoji128.yaml文件的内容 如下<br>
+<img src="https://uuvip.github.io/post-images/1713870205393.png" alt="" loading="lazy"><br>
+就是：去掉多余的类目，保留自己的一个训练类目，还有修改图里面3个路径</p>
+<!-- more -->
+<p>接下来修改train.py文件，大约518行 date路径为：data/huoji128.yaml，就是我们刚才编辑的yaml文件<br>
+<img src="https://uuvip.github.io/post-images/1713870621506.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>修改训练次数--epochs&quot;, type=int, default=100次</p>
+<p>运行，，train.py文件，开始训练了</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PHP图片倒序排列]]></title>
+        <id>https://uuvip.github.io/post/php-tu-pian-dao-xu-pai-lie/</id>
+        <link href="https://uuvip.github.io/post/php-tu-pian-dao-xu-pai-lie/">
+        </link>
+        <updated>2024-04-21T15:35:40.000Z</updated>
+        <content type="html"><![CDATA[<?php
+
+// 获取图片文件列表
+$files = scandir('pic');
+
+// 过滤掉非图片文件
+$pic = array_filter($files, function($file) {
+    return is_file("pic/$file") && in_array(pathinfo($file, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png', 'gif']);
+});
+
+// 按时间倒序排列图片
+usort($pic, function($a, $b) {
+    return filemtime("pic/$a") < filemtime("pic/$b");
+});
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>相册</title>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+<pre><code>    .gallery li {
+        width: 33%;
+        margin: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+&lt;/style&gt;
+</code></pre>
+</head>
+<body>
+    <h1>相册</h1>
+    <ul class="gallery">
+        <?php foreach ($pic as $image): ?>
+            <li>
+                <a href="pic/<?php echo $image; ?>">
+                    <img src="pic/<?php echo $image; ?>" alt="<?php echo $image; ?>">
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</body>
+</html>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[yolov5识别图片视频人物帧数]]></title>
+        <id>https://uuvip.github.io/post/yolov5-shi-bie-tu-pian-shi-pin-zhi-bao-liu-ren-wu-zheng-shu/</id>
+        <link href="https://uuvip.github.io/post/yolov5-shi-bie-tu-pian-shi-pin-zhi-bao-liu-ren-wu-zheng-shu/">
+        </link>
+        <updated>2024-04-20T18:21:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>保存识别的图片<br>
+python detect.py --source ./data/images/ --classes 0 --save-txt --conf-thres 0.5<br>
+--view-img 表示可见视频，显示实时视频，去掉就不见 MP4不显示用<br>
+--classes 0  只识别人，去掉全部物体都识别，0可以换成其他类别<br>
+--conf-thres 0.5 表示0.5以下的不显示<br>
+--source ./data/images/  图片or视频源</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>保存识别的图片<br>
+python detect.py --source ./data/images/ --classes 0 --save-txt --conf-thres 0.5<br>
+--view-img 表示可见视频，显示实时视频，去掉就不见 MP4不显示用<br>
+--classes 0  只识别人，去掉全部物体都识别，0可以换成其他类别<br>
+--conf-thres 0.5 表示0.5以下的不显示<br>
+--source ./data/images/  图片or视频源</p>
+<!-- more -->
+<p>要实现上面命令要修改detect.py文件，在里面加2段内容<br>
+p = Path(p)  # to Path<br>
+save_path = str(save_dir / p.name)  # img.jpg<br>
+txt_path = str(save_dir / 'labels' / p.stem) + ('' if dataset.mode == 'image' else f'_{frame}')  # img.txt</p>
+<pre><code>        #################保存实时检测图片#################
+        pic_dir = str(save_dir) + '/pic'
+        if not os.path.exists(pic_dir):
+            os.makedirs(pic_dir)
+        pic_path = pic_dir + '\\' + str(p.stem) + ('' if dataset.mode == 'image' else f'_{frame}')
+        #######################################################################
+
+                    上面是一段的位置下，加入####
+                    下面一段看如下
+</code></pre>
+<!-- more -->
+<p>if save_img or save_crop or view_img:  # Add bbox to image<br>
+c = int(cls)  # integer class<br>
+label = None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f}')<br>
+annotator.box_label(xyxy, label, color=colors(c, True))</p>
+<pre><code>                    ############只保存含目标的实时检测图片###############
+                    pic = (int(xyxy[0].item()) + int(xyxy[2].item())) / 2
+                    if pic != 0:
+                        cv2.imwrite(pic_path + f'{p.stem}.jpg', im0)
+                    else:
+                        im1 = cv2.imread('no.jpg', 1)
+                        cv2.imwrite(pic_path + f'{p.stem}.jpg', im1)
+                    ###################################################################
+                    加入运行python detect.py --source ./data/images/ --classes 0 --save-txt --conf-thres 0.5
+</code></pre>
+<hr>
+<pre><code>                可去掉所有标签名和阈值   yolov5/utils/plots.py
+              找到  utils\plots.py
+</code></pre>
+<p>def box_label(self, box, label='', color=(128, 128, 128), txt_color=(255, 255, 255)):#81行下面加一行<br>
+label = ''  #加这一句</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[rtsp视频流服务器]]></title>
+        <id>https://uuvip.github.io/post/rtsp-shi-pin-liu-fu-wu-qi/</id>
+        <link href="https://uuvip.github.io/post/rtsp-shi-pin-liu-fu-wu-qi/">
+        </link>
+        <updated>2024-04-18T15:53:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>https://github.com/bluenviron/mediamtx</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>https://github.com/bluenviron/mediamtx</p>
+<!-- more -->
+<p>https://hub.docker.com/r/bluenviron/mediamtx</p>
+<!-- more -->
+<p>Download and launch the image:</p>
+<p>docker run  -it <br>
+-e MTX_PROTOCOLS=tcp <br>
+-e MTX_WEBRTCADDITIONALHOSTS=192.168.1.111 <br>
+-p 28554:8554 <br>
+-p 11935:1935 <br>
+-p 18888:8888 <br>
+-p 18889:8889 <br>
+-p 18890:8890/udp <br>
+-p 18189:8189/udp <br>
+bluenviron/mediamtx:latest-ffmpeg<br>
+docker搭建的话，直接进入容器内部用命令推流<br>
+docker exec -it d59cfdd95e4f /bin/sh   进入容器，使用以下命令推流，，exit退出容器<br>
+推流命令<br>
+ffmpeg -re -stream_loop -1 -i 22.mp4 -c copy -an -f rtsp rtsp://127.0.0.1:8554/mystream  视频，循环推流</p>
+<!-- more -->
+<p>监控推流<br>
+ffmpeg -i rtsp://192.168.1.6:554/onvif1 -c copy -f rtsp rtsp://localhost:8554/mystream</p>
+<!-- more -->
+<p>电脑USB摄像机推流，首先获取USB摄像头名称<br>
+ffmpeg -list_devices true -f dshow -i dummy 查看摄像头名称<br>
+ffmpeg -f dshow -i video=&quot;USB2.0 PC CAMERA&quot; -vcodec libx264 -preset:v ultrafast -tune:v zerolatency -rtsp_transport tcp -f rtsp rtsp://192.168.1.3:8554/video -thread_queue_size 50</p>
+<!-- more -->
+<p>ffmpeg: 这是调用FFmpeg程序的命令。<br>
+ffmpeg -list_devices true -f dshow -i dummy 查看摄像头名称<br>
+-re: 以实时速率读取输入文件，使其与摄像头的实时数据流保持同步。<br>
+-rtsp_transport tcp: 这个参数是用来指定RTSP流的传输协议为TCP。<br>
+-vcodec h264: 输出视频的编解码器为H.264。<br>
+-b:v 1000k: 比特率为1000千位每秒 (k表示千位)。比特率决定了视频的质量和文件大小。<br>
+-f rtsp: 输出格式为RTSP流。<br>
+-an 表示不编码音频<br>
+web实时观看页面 http://localhost:8889/mystream</p>
+<p>vlc拉取命令 rtsp://localhost:8554/mystream</p>
+<!-- more -->
+<p>python detect.py --source C:\Users\qinpc\Downloads/花园-20240413-122411.mp4 --view-img --classes 0 --conf-thres 0.5<br>
+yolov5识别视频人物<br>
+--view-img 表示可见视频，显示实时视频，去掉就不见<br>
+--classes 0  只识别人，去掉全部物体都识别<br>
+--conf-thres 0.5 表示0.5以下的不显示<br>
+python detect.py --source http://192.168.1.3:8080 --classes 0 --view-img --conf-thres 0.5</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[onvif测试工具]]></title>
+        <id>https://uuvip.github.io/post/onvif-ce-shi-gong-ju/</id>
+        <link href="https://uuvip.github.io/post/onvif-ce-shi-gong-ju/">
+        </link>
+        <updated>2024-04-10T14:30:16.000Z</updated>
+        <content type="html"><![CDATA[<p>工具名字ONVIF Device Manager<br>
+下载地址<br>
+https://www.veilux.net/download/onvif-device-manager/</p>
+]]></content>
+    </entry>
+</feed>

@@ -1,0 +1,565 @@
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+        <div class="content-container">
+          
+          
+
+<div class="archives-container">
+  
+    <h2 class="year">2022</h2>
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/php-xian-shi-wen-jian-jia-xia-de-tu-pian-dai-ma/">
+            <h2 class="post-title">
+              php显示文件夹下的图片代码
+              <small>2022-03-13</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/jia-gu-wen-da-jian-v2ray/">
+            <h2 class="post-title">
+              甲骨文搭建V2ray
+              <small>2022-03-12</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/frp-ming-ling-da-quan/">
+            <h2 class="post-title">
+              frp命令大全
+              <small>2022-03-12</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/frp-hou-tai-yun-xing-he-ting-zhi/">
+            <h2 class="post-title">
+              frp后台运行和停止
+              <small>2022-03-12</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/liu-lan-qi-da-bu-kai-wang-zhan/">
+            <h2 class="post-title">
+              浏览器打不开网站
+              <small>2022-03-06</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/lao-mao-zi-frp-nei-wang-chuan-tou/">
+            <h2 class="post-title">
+              老毛子frp内网穿透
+              <small>2022-02-12</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/lao-mao-zi-lao-mao-zi-da-jian-web-huan-jing/">
+            <h2 class="post-title">
+              老毛子老毛子搭建web环境
+              <small>2022-02-12</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/qiang-da-de-nei-wang-chuan-tou-gong-ju-zerotier/">
+            <h2 class="post-title">
+              强大的内网穿透工具ZeroTier
+              <small>2022-01-22</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/ruan-jian-xia-zai-di-zhi/">
+            <h2 class="post-title">
+              软件下载地址
+              <small>2022-01-22</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/wakey-kong-zhi-ping-mu-shui-mian-he-liang-du-714-you-qia-nei-ti-ke/">
+            <h2 class="post-title">
+              Wakey - 控制屏幕睡眠和亮度 7.1.4 由卡内提克
+              <small>2022-01-22</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/linuxdeploy-an-zhuang-debian-zuo-fu-wu-qi/">
+            <h2 class="post-title">
+              linuxdeploy安装Debian做服务器
+              <small>2022-01-22</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/niao-yun-chi-zhi-yi-heng/">
+            <h2 class="post-title">
+              鸟云持之以恒
+              <small>2022-01-20</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/u-pan-ge-shi-hua-ming-ling/">
+            <h2 class="post-title">
+              U盘格式化命令
+              <small>2022-01-17</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/gridea-huan-dian-nao-yi-ding-yao-bei-fen/">
+            <h2 class="post-title">
+              Gridea换电脑一定要备份
+              <small>2022-01-17</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/an-zhuang-php/">
+            <h2 class="post-title">
+              安装php
+              <small>2022-01-17</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/httpd-fu-wu-de-pei-zhi-wen-jian/">
+            <h2 class="post-title">
+              httpd服务的配置文件
+              <small>2022-01-17</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/filebrowser-kai-ji-zi-qi/">
+            <h2 class="post-title">
+              filebrowser 开机自启
+              <small>2022-01-17</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/xiyouji/">
+            <h2 class="post-title">
+              仿梦幻西游官方网站教程
+              <small>2022-01-09</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/hugo-an-zhuang-bo-ke-jiao-cheng/">
+            <h2 class="post-title">
+              hugo安装博客教程
+              <small>2022-01-09</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/gridea-ke-hu-duan-wu-fa-tong-bu-dao-github-pages/">
+            <h2 class="post-title">
+              Gridea客户端无法同步到GitHub Pages
+              <small>2022-01-09</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+    <h2 class="year">2021</h2>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/安装zerotier/">
+            <h2 class="post-title">
+              安装zerotier
+              <small>2021-09-15</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/docker安装教程/">
+            <h2 class="post-title">
+              Docker安装教程
+              <small>2021-09-09</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/温度计使用教程/">
+            <h2 class="post-title">
+              温度计使用教程
+              <small>2021-06-22</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/git教程/">
+            <h2 class="post-title">
+              Git教程
+              <small>2021-01-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/mkdocs教程/">
+            <h2 class="post-title">
+              Mkdocs教程
+              <small>2021-01-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/gitbook教程/">
+            <h2 class="post-title">
+              Gitbook教程
+              <small>2021-01-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/拼多多设置/">
+            <h2 class="post-title">
+              拼多多设置
+              <small>2021-01-29</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+      
+    
+  
+    <h2 class="year">2018</h2>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <article class="post">
+          <a href="https://uuvip.github.io/post/hello-gridea/">
+            <h2 class="post-title">
+              Hello Gridea
+              <small>2018-12-12</small>
+            </h2>
+          </a>
+        </article>
+      
+    
+  
+</div>
+
+
+        </div>
+
+        <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+      </div>
+      <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+    </div>
+  </body>
+</html>

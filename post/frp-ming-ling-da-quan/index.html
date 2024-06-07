@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>frp命令大全 | 班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">frp命令大全</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-03-12</span>
+            
+          </div>
+          <div class="post-content">
+            <p>内网穿透工具 FRP 帮助、版本、进程、运行、停止 命令</p>
+<!-- more -->
+<p>在使用FRP的过程中，由于命令太多，所以整理出相关的FRP命令，希望能帮助到大家，如果有不足的地方，也请在文章底部留言，感谢大家的完善。</p>
+<p>注意：在FRP文件目录中操作</p>
+<p>公网服务端 frps 相关命令<br>
+公网服务端 frps 相关命令<br>
+[root@centos frp]# ./frps -v   #显示版本号<br>
+[root@centos frp]# ./frps -h   #显示帮助说明<br>
+[root@centos frp]# ./frps -c ./frps.ini   #启动 frps ，关闭SSH窗口即停止运行<br>
+[root@centos frp]# cat frps.ini   #查看服务端 frps.ini 配置文件<br>
+[root@centos frp]# ps -ef |grep frps|grep -v grep   #frps服务端进程状态<br>
+[root@centos frp]# nohup ./frps -c ./frps.ini &gt;/dev/null 2&gt;&amp;1 &amp;   #frps服务端后台运行<br>
+[root@centos frp]# ps -ef |grep frps|grep -v grep |awk '{print $2}'|xargs kill -9   #frps服务端-停止</p>
+<p>查看版本号</p>
+<p>[root@centos frp]# ./frps -v   #显示版本号<br>
+0.30.0<br>
+[root@centos frp]# ./frps -h   #显示帮助说明<br>
+frps is the server of frp (https://github.com/fatedier/frp)</p>
+<p>Usage:<br>
+frps [flags]</p>
+<p>Flags:<br>
+--allow_ports string         allow ports<br>
+--bind_addr string           bind address (default &quot;0.0.0.0&quot;)<br>
+-p, --bind_port int              bind port (default 7000)<br>
+--bind_udp_port int          bind udp port<br>
+-c, --config string              config file of frps<br>
+--dashboard_addr string      dasboard address (default &quot;0.0.0.0&quot;)<br>
+--dashboard_port int         dashboard port<br>
+--dashboard_pwd string       dashboard password (default &quot;admin&quot;)<br>
+--dashboard_user string      dashboard user (default &quot;admin&quot;)<br>
+--disable_log_color          disable log color in console<br>
+-h, --help                       help for frps<br>
+--kcp_bind_port int          kcp bind udp port<br>
+--log_file string            log file (default &quot;console&quot;)<br>
+--log_level string           log level (default &quot;info&quot;)<br>
+--log_max_days int           log max days (default 3)<br>
+--max_ports_per_client int   max ports per client<br>
+--proxy_bind_addr string     proxy bind address (default &quot;0.0.0.0&quot;)<br>
+--subdomain_host string      subdomain host<br>
+-t, --token string               auth token<br>
+-v, --version                    version of frpc<br>
+--vhost_http_port int        vhost http port<br>
+--vhost_http_timeout int     vhost http response header timeout (default 60)<br>
+--vhost_https_port int       vhost https port<br>
+[root@centos frp]#</p>
+<!-- more -->
+<p>内网客户端 frpc 相关命令<br>
+[root@centos frp]# ./frpc -v   #显示版本号<br>
+[root@centos frp]# ./frpc -h   #显示帮助说明<br>
+[root@centos frp]# ./frpc -c ./frpc.ini   #启动 frpc ，关闭SSH窗口即停止运行<br>
+[root@centos frp]# cat frpc.ini   #查看客户端 frpc.ini 配置文件<br>
+[root@centos frp]# ps -ef |grep frpc|grep -v grep   #frpc客户端进程状态<br>
+[root@centos frp]# nohup ./frpc -c ./frpc.ini &gt;/dev/null 2&gt;&amp;1 &amp;   #frpc客户端后台运行<br>
+[root@centos frp]# ps -ef |grep frpc|grep -v grep |awk '{print $2}'|xargs kill -9   #frpc客户端-停止</p>
+<p>查看版本号</p>
+<p>[root@centos frp]# ./frpc -v   #显示版本号<br>
+0.30.0<br>
+[root@centos frp]# ./frpc -h   #显示帮助说明<br>
+frpc is the client of frp (https://github.com/fatedier/frp)</p>
+<p>Usage:<br>
+frpc [flags]<br>
+frpc [command]</p>
+<p>Available Commands:<br>
+help        Help about any command<br>
+http        Run frpc with a single http proxy<br>
+https       Run frpc with a single https proxy<br>
+reload      Hot-Reload frpc configuration<br>
+status      Overview of all proxies status<br>
+stcp        Run frpc with a single stcp proxy<br>
+tcp         Run frpc with a single tcp proxy<br>
+udp         Run frpc with a single udp proxy<br>
+xtcp        Run frpc with a single xtcp proxy</p>
+<p>Flags:<br>
+-c, --config string   config file of frpc (default &quot;./frpc.ini&quot;)<br>
+-h, --help            help for frpc<br>
+-v, --version         version of frpc</p>
+<p>Use &quot;frpc [command] --help&quot; for more information about a command.<br>
+[root@centos frp]#</p>
+<p>原教程<br>
+https://www.nasge.com/archives/26.html</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://uuvip.github.io/post/frp-hou-tai-yun-xing-he-ting-zhi/">
+              <h3 class="post-title">
+                下一篇：frp后台运行和停止
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

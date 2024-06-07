@@ -1,0 +1,329 @@
+
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        
+        
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/yolov5-huan-jing-an-zhuang/">
+        <h2 class="post-title">yolov5环境安装</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2024-06-08</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/docker-an-zhuang-zerotier/">
+        <h2 class="post-title">docker安装zerotier</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2024-06-06</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/da-hua-jian-kong-hui-fu-chu-han/">
+        <h2 class="post-title">大华监控恢复出厂</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2024-05-03</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/n1-an-zhuang-frigate-shi-xian-ipcamera-zi-dong-jian-ce-ren-lian-shi-bie-zi-dong-hua/">
+        <h2 class="post-title">N1安装Frigate实现IPcamera自动检测人脸识别自动化</h2>
+      </a>
+      <div class="post-abstract">
+        <p>N1启动成功了</p>
+<p>docker run -d <br>
+--name frigate <br>
+--restart=unless-stopped <br>
+--mount type=tmpfs,target=/tmp/cache,tmpfs-size=1000000000 <br>
+--device /dev/bus/usb:/dev/bus/usb <br>
+--device /dev/dri/card0 <br>
+--shm-size=64m <br>
+-v /mnt/sda4/gongx/media:/media/frigate <br>
+-v /mnt/sda4/gongx/config:/config <br>
+-v /etc/localtime:/etc/localtime:ro <br>
+-e FRIGATE_RTSP_PASSWORD='password' <br>
+-p 5000:5000 <br>
+-p 8554:8554 <br>
+-p 8555:8555/tcp <br>
+-p 8555:8555/udp <br>
+ghcr.io/blakeblackshear/frigate:stable</p>
+
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2024-04-26</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/shi-pin-chou-zheng/">
+        <h2 class="post-title">视频抽帧</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2024-04-23</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/mo-xing-xun-lian-yolov5-master/">
+        <h2 class="post-title">模型训练yolov5-master</h2>
+      </a>
+      <div class="post-abstract">
+        <p>源码https://github.com/ultralytics/yolov5下载好<br>
+用labelimg工具标记要训练的物体，图越多，训练次数越多，效果才好<br>
+标记完后<br>
+整理文件夹，结构<br>
+需要2个文件名，images和labels 就是标记好的图片和标签，放这2个放在任意一个文件里面，放在yolo工作目录里，如图<br>
+<img src="https://uuvip.github.io/post-images/1713869909055.png" alt="" loading="lazy"></p>
+
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2024-04-23</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/php-tu-pian-dao-xu-pai-lie/">
+        <h2 class="post-title">PHP图片倒序排列</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2024-04-21</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/yolov5-shi-bie-tu-pian-shi-pin-zhi-bao-liu-ren-wu-zheng-shu/">
+        <h2 class="post-title">yolov5识别图片视频人物帧数</h2>
+      </a>
+      <div class="post-abstract">
+        <p>保存识别的图片<br>
+python detect.py --source ./data/images/ --classes 0 --save-txt --conf-thres 0.5<br>
+--view-img 表示可见视频，显示实时视频，去掉就不见 MP4不显示用<br>
+--classes 0  只识别人，去掉全部物体都识别，0可以换成其他类别<br>
+--conf-thres 0.5 表示0.5以下的不显示<br>
+--source ./data/images/  图片or视频源</p>
+
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2024-04-21</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/rtsp-shi-pin-liu-fu-wu-qi/">
+        <h2 class="post-title">rtsp视频流服务器</h2>
+      </a>
+      <div class="post-abstract">
+        <p>https://github.com/bluenviron/mediamtx</p>
+
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2024-04-18</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://uuvip.github.io/post/onvif-ce-shi-gong-ju/">
+        <h2 class="post-title">onvif测试工具</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2024-04-10</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+
+<div class="pagination-container">
+  
+  
+    <a href="https://uuvip.github.io/page/2" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
+  
+</div>
+
+
+      </div>
+
+      <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

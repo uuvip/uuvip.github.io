@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>php显示文件夹下的图片代码 | 班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">php显示文件夹下的图片代码</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-03-13</span>
+            
+          </div>
+          <div class="post-content">
+            <pre><code class="language-javascript">&lt;?php  
+  
+echo &quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;动态图片&lt;/title&gt;&lt;/head&gt;&lt;body bgcolor=000000&gt;&lt;center&gt;&lt;font size=2 color=red&gt;&quot;;//输出html相关代码  
+  
+$page=$_GET['page'];//获取当前页数  
+  
+$max=50;//设置每页显示图片最大张数  
+  
+$path=&quot;images&quot;;//设置你的图片当前目录
+  
+$handle = opendir($path);
+  
+    while (false !== ($file = readdir($handle))) { //遍历该php文件所在目录  
+  
+      list($filesname,$kzm)=explode(&quot;.&quot;,$file);//获取扩展名  
+  
+        if($kzm==&quot;gif&quot; or $kzm==&quot;jpg&quot; or $kzm==&quot;JPG&quot;) { //文件过滤  
+  
+          if (!is_dir('./'.$file)) { //文件夹过滤  
+  
+            $array[]=$file;//把符合条件的文件名存入数组  
+  
+            $i++;//记录图片总张数  
+  
+           }  
+  
+          }  
+  
+    }  
+  
+for ($j=$max*$page;$j&lt;($max*$page+$max)&amp;&amp;$j&lt;$i;++$j){//循环条件控制显示图片张数  
+  
+    //echo &quot;&lt;img widht=800 height=600 src=\&quot;.$path&quot;\&quot;.$array[$j].&quot;&gt;&quot;;//输出图片数组  
+  
+echo &quot;&lt;a href=&quot;.$path.&quot;/&quot;.$array[$j].&quot;&gt;&lt;img width= height= src=&quot;.$path.&quot;/&quot;.$array[$j].&quot;&gt;&lt;/a&gt;&lt;br&gt;&quot;;  
+  
+}  
+  
+$Previous_page=$page-1;  
+  
+$next_page=$page+1;  
+  
+if ($Previous_page&lt;0){  
+  
+    echo &quot;上页&quot;;  
+  
+    echo &quot;&lt;a href=?page=$next_page&gt;下页&lt;/a&gt;&quot;;  
+  
+}  
+  
+    else if ($page&lt;=$i/$max){  
+  
+      echo &quot;&lt;a href=?page=$Previous_page&gt;上页&lt;/a&gt;&quot;;  
+  
+      echo &quot;&lt;a href=?page=$next_page&gt;下页&lt;/a&gt;&quot;;}  
+  
+        else{  
+  
+          echo &quot; &lt;a href=?page=$Previous_page&gt;上页&lt;/a&gt;&quot;;  
+  
+          echo &quot;下页&quot;;  
+  
+        }  
+  
+echo &quot;&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;&quot;;  
+  
+?&gt;  
+</code></pre>
+<p>第30行加上这句<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>r</mi><mi>r</mi><mi>a</mi><mi>y</mi><mo>=</mo><mi>a</mi><mi>r</mi><mi>r</mi><mi>a</mi><msub><mi>y</mi><mi>r</mi></msub><mi>e</mi><mi>v</mi><mi>e</mi><mi>r</mi><mi>s</mi><mi>e</mi><mo>(</mo></mrow><annotation encoding="application/x-tex">array=array_reverse(</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mopen">(</span></span></span></span>array); //这行图片倒序</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://uuvip.github.io/post/jia-gu-wen-da-jian-v2ray/">
+              <h3 class="post-title">
+                下一篇：甲骨文搭建V2ray
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

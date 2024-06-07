@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>Gitbook教程 | 班长博客</title>
+<meta name="description" content="记录点滴-温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://uuvip.github.io/favicon.ico?v=1717779432910">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://uuvip.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9YTTL19R0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9YTTL19R0');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://uuvip.github.io">
+        <img class="avatar" src="https://uuvip.github.io/images/avatar.png?v=1717779432910" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://uuvip.github.io">
+        <h1 class="site-title">班长博客</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">Gitbook教程</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-01-29</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://uuvip.github.io/tag/nZ7h7wwSZf/">
+                    Gitbook
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <!--more-->
+<h2 id="1安装nodejs">1,安装node.js</h2>
+<p>安装这个版本https://cdn.npm.taobao.org/dist/node/v10.15.3/node-v10.15.3-x64.msi 查看版本号 node -v v10.15.3</p>
+<h2 id="2安装gitbook">2,安装GitBook</h2>
+<p>npm install gitbook-cli -g</p>
+<p>查看版本号 gitbook -V CLI version: 2.3.2 GitBook version: 3.2.3</p>
+<p>如果看不到版本号 设置变量 解决步骤 ( window系统为例 )：</p>
+<pre><code>1、npm config get prefix查询全局安装路径，然后把拷贝一下C:\Users\admin\AppData\Roaming\npm
+
+       2、电脑搜系统全局变量 ，设置变量后重新打开CMD命令，就能查看GIEBOOK版本号了
+       3、把上面复制的路径，设置成变量路径，
+       变量名为：PATH
+</code></pre>
+<p>C:\Users\admin\AppData\Roaming\npm</p>
+<figure data-type="image" tabindex="1"><a href="https://q376444013.gitee.io/BL.png"><img src="https://q376444013.gitee.io/BL.png" alt="变量图" loading="lazy"></a></figure>
+<h2 id="3初始化-先进入一个新的目录在gitbook-init">3,初始化 先进入一个新的目录在gitbook init</h2>
+<p>gitbook init</p>
+<p>运行 gitbook serve</p>
+<p>命令也可以指定端口：gitbook serve –port 8088</p>
+<p>生成的html文件 gitbook build</p>
+<h2 id="常用命令解析">常用命令解析</h2>
+<p>gitbook init //初始化目录文件<br>
+gitbook help //列出gitbook所有的命令<br>
+gitbook –help //输出gitbook-cli的帮助信息<br>
+gitbook build //生成静态网页<br>
+gitbook serve //生成静态网页并运行服务器<br>
+gitbook build –gitbook=2.0.1 //生成时指定gitbook的版本, 本地没有会先下载<br>
+gitbook ls //列出本地所有的gitbook版本 gitbook ls-remote //列出远程可用的gitbook版本 gitbook fetch 标签/版本号 //安装对应的gitbook版本 gitbook update //更新到gitbook的最新版本 gitbook uninstall 2.0.1 //卸载对应的gitbook版本 gitbook build –log=debug //指定log的级别</p>
+<h2 id="gitbook-builid-debug-输出错误信息">gitbook builid –debug //输出错误信息</h2>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://uuvip.github.io/post/拼多多设置/">
+              <h3 class="post-title">
+                下一篇：拼多多设置
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">记录点滴-温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://uuvip.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
